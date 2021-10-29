@@ -23,7 +23,7 @@ function myApp() {
           <li> <Link to="/about">About</Link> </li>
         </ul>
       </div>
-      <div className="App-Intro">
+      <div className="App-intro">
         <Switch>
           <Route exact path ="/" component={Home} />
           <Route path ="/about" component={About} />
