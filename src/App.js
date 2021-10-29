@@ -1,26 +1,42 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {
+  Route,
+  Link,
+  Switch,
+  Redirect
+} from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
 
-function App() {
+function Welcome(props) {
+  return <h1> Hi, {props.name} </h1>;
+}
+const introtext = <h1> Testing pracs for Week 11. </h1>;
+function myApp() {
   return (
     <div className="App">
+      <div className="menu">
+        <ul>
+          <li> <Link to="/">Home</Link> </li>
+          <li> <Link to="/about">About</Link> </li>
+        </ul>
+      </div>
+      <div className="App-Intro">
+        <Switch>
+          <Route exact path ="/" component={Home} />
+          <Route path ="/about" component={About} />
+          <Route component={Home} />
+        </Switch>
+      </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hello from Daniel, testing changing the text v1
-        </a>
+        <Welcome name="Daniel" />
+        {introtext}
       </header>
     </div>
   );
 }
 
-export default App;
+export default myApp;
