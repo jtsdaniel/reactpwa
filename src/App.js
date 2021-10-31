@@ -10,6 +10,7 @@ import {
 
 import Home from './components/Home';
 import About from './components/About';
+import Patient from './components/Patient';
 
 function Welcome(props) {
   return <h1> Hi, {props.name} </h1>;
@@ -22,16 +23,18 @@ function myApp() {
         <ul>
           <li> <Link to="/">Home</Link> </li>
           <li> <Link to="/about">About</Link> </li>
+          <li> <Link to="/patient">Patient</Link> </li>
         </ul>
       </div>
       <div className="App-intro">
         <Switch>
           <Route exact path ="/" component={Home} />
           <Route path ="/about" component={About} />
+          <Route path ="/patient" component={Patient} />
           <Route component={Home} />
         </Switch>
       </div>
-      <header className="App-header">
+      <header className="App-logo-spin">
         <img src={logo} className="App-logo" alt="logo" />
         <Welcome name="Daniel" />
         {introtext}

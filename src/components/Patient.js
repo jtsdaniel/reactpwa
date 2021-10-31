@@ -12,7 +12,7 @@ const dummydata = [
     { name: 'Page G', uv: 1000, pv: 2400,amt: 2400},
 ]
 
-export default class Educator extends Component {
+export default class Patient extends Component {
     state = {
         PatientDocs: [],
         PatientDoc: [],
@@ -82,8 +82,7 @@ export default class Educator extends Component {
                     {renderLineChart}
 
             </div>
-        )
-            
+        )    
     }
 }
 
