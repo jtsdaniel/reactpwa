@@ -41,7 +41,7 @@ export default class Patient extends Component {
             .then(response => {
                 const PatientDoc = response.data.rows;
                 this.setState({ PatientDoc })
-                console.log(PatientDoc)
+                //console.log(PatientDocs)
             })
             .catch(error => console.error(`Error: ${error}`))
 
