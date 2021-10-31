@@ -39,9 +39,9 @@ export default class Patient extends Component {
             responseType: 'json',
         })
             .then(response => {
-                const PatientDoc = response.data.rows;
+                const PatientDoc = response.data;
                 this.setState({ PatientDoc })
-                //console.log(PatientDocs)
+                console.log(PatientDoc)
             })
             .catch(error => console.error(`Error: ${error}`))
 
