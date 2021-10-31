@@ -34,7 +34,7 @@ function myApp() {
           <Route component={Home} />
         </Switch>
       </div>
-      <header className="App-logo-spin">
+      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Welcome name="Daniel" />
         {introtext}
